@@ -1,10 +1,12 @@
 
 
-def removeSepecificElementFromList(list:list,elements:list):
-    for i in list:
-        for j in elements:
-            if i==j:
-                list.remove(i)
-    return list;
+def removeSepecificElementFromList(startList:list,elements:list):
+    position=list(startList)
+    for j in elements:
+        for index,i in enumerate(startList):
+            if(index==j):
+                position.remove(i)
+           
+    return position;
 
-print(removeSepecificElementFromList([1,2,3,4,5],[3,5]))
+print(removeSepecificElementFromList(['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow'],[2,5]))
